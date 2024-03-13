@@ -5,8 +5,11 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the requirements file and install dependencies
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install pandas
+RUN pip install numpy
+RUN pip install scikit-learn
+RUN pip install boto3
+RUN pip install tensorflow
 
 # Copy the rest of the application code into the container
 COPY . .
