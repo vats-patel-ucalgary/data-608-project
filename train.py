@@ -24,6 +24,7 @@ dataset_pickle_obj = pickle.dumps(obj)
 s3_resource = boto3.resource('s3')
 s3_resource.Object(bucket_name, 'test2.bin').put(Body=dataset_pickle_obj)
 
+print(f"SUCCESS UPLOAD")
 # dataset = pd.read_csv('Churn_Modelling.csv')
 # print(dataset.head(5))
 
